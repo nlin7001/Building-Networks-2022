@@ -3,29 +3,36 @@ library(plotly)
 library(dplyr)
 library(reshape2)
 
-BN_mentees <- read.csv("https://raw.githubusercontent.com/nlin7001/Building-Networks-2022/main/BN_mentees.csv")
+BN_mentees <- read.csv("https://raw.githubusercontent.com/nlin7001/Building-Networks-2022/main/BN_Charts.csv")
+
+# Plot 1
+
+majors <- BN_mentees %>%  
+  select(Majors, Major_Value)
+
 
 server <- function(input, output) {
-
 
   
   #Chart 1: Majors
   
   output$all_majors <- renderPlotly({
     
-    # Allow user to filter by multiple countries and years
     majors <- majors %>%
-      filter(First.and.Last.Name %in% input$user_chosen)
+      filter(Majors %in% input$user_chosen)
+  
+    my_plot_1 <- ggplot (majors) + 
+      geom_col(mapping = aes(x = Majors, y = Major_Value, fill= Majors))+
+      labs(title = 'BN Majors',
+           x = 'Majors',
+           y = 'People',
+           fill = 'Majors') + 
+      scale_fill_brewer(palette = "Set2")+
+      scale_colour_discrete("Majors")
     
-    # Make a scatter plot of co2 per capita over time by country
-    my_plot <- ggplot(data = majors, aes(x = "", y = ) ) +
-      geom_bar(aes(x = Year, y = value, color = Country.name)) +
-      labs(
-        title = "CO2 emissions per units of GDP",
-        x = "Year", 
-        y = "kg per $1,000 GDP (2005 PPP$)"
-      ) +
-      scale_colour_discrete("Country")
+    my_plotly_plot1 <- ggplotly(my_plot_1)
+    
+    return (my_plotly_plot1)
     
   })
   

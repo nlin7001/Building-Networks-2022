@@ -1,0 +1,13 @@
+name: Building_Networks_2022
+title: Building_Networks_2022
+username:
+account: nlin
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5904322
+bundleId: 5711143
+url: https://nlin.shinyapps.io/Building_Networks_2022/
+when: 1647909798.21706
+lastSyncTime: 1647909798.21707
+asMultiple: FALSE
+asStatic: FALSE
