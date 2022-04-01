@@ -4,7 +4,7 @@ library(plotly)
 library(bslib)
 library(reshape2)
 
-BN_mentees <- read.csv("https://raw.githubusercontent.com/nlin7001/Building-Networks-2022/main/BN_Charts.csv")
+BN_mentees <- read.csv("~/Desktop/Building Networks 2022/BN_Charts_1.csv")
 
 
 #Plot 1 

@@ -5,9 +5,10 @@ account: nlin
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5904322
-bundleId: 5711143
+bundleId: 5747662
 url: https://nlin.shinyapps.io/Building_Networks_2022/
-when: 1647909798.21706
-lastSyncTime: 1647909798.21707
+when: 1648686742.76147
+lastSyncTime: 1648686742.76148
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: BN_Charts_1.csv|BN_Charts.csv|BN_mentees.csv|race_tab.R
